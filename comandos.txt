@@ -1,0 +1,33 @@
+ng new [proyectName]
+
+npm install primeng --save
+npm install primeicons --save
+npm install @angular/animations --save
+
+npm install bootstrap --save
+npm install jquery --save
+npm install popper.js --save
+
+import { FormsModule } from '@angular/forms';
+
+*angular.json*
+"styles": [
+  "node_modules/primeicons/primeicons.css",
+  "node_modules/primeng/resources/themes/nova-light/theme.css",
+  "node_modules/primeng/resources/primeng.min.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+], 
+"scripts": [
+  "node_modules/jquery/dist/jquery.slim.min.js",
+  "node_modules/popper.js/dist/popper.min.js",
+  "node_modules/bootstrap/dist/js/bootstrap.min.js"
+],
+
+http://localhost:8085/ServiciosAlumnos/servicios/alumnoServicio/obtenerTodosAlumnos?
+
+http://localhost:8085/ServiciosAlumnos/servicios/alumnoServicio/guardarAlumno?nombres=pruebaget&apePaterno=ap&apeMaterno=apm
+
+http://localhost:8085/ServiciosAlumnos/servicios/alumnoServicio/modificarAlumno?matricula=14&nombres=pruebagetModificado&apePaterno=ap&apeMaterno=apm&modificadoPor=user
+
+http://localhost:8085/ServiciosAlumnos/servicios/alumnoServicio/eliminarAlumno?matricula=14
