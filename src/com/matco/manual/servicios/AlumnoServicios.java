@@ -25,7 +25,7 @@ public class AlumnoServicios extends Generic{
 	@GET
 	@Path("guardarAlumno")
 	@Produces(MediaType.APPLICATION_JSON)
-	public int guardarAlumno(@QueryParam("nombres") String nombres,
+	public Alumno guardarAlumno(@QueryParam("nombres") String nombres,
 			@QueryParam("apePaterno") String apePaterno,
 			@QueryParam("apeMaterno") String apeMaterno,
 			@QueryParam("creadoPor") String creadoPor) throws Exception {
@@ -34,7 +34,9 @@ public class AlumnoServicios extends Generic{
 		tmp.setApellidoPaterno(apePaterno);
 		tmp.setApellidoMaterno(apeMaterno);
 		tmp.setCreadoPor(creadoPor);
-		return alumnoFacade.guardarAlumno(tmp);
+		int mat = alumnoFacade.guardarAlumno(tmp);
+		System.out.println("Hasta aqui todo bien");
+		return alumnoFacade.obtenerAlumnoPorMatricula(mat);
 	}
 	
 	@PUT
