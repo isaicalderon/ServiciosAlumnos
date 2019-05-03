@@ -38,7 +38,12 @@ public class AlumnoServicios extends Generic{
 		System.out.println("Hasta aqui todo bien");
 		return alumnoFacade.obtenerAlumnoPorMatricula(mat);
 	}
-	
+	@PUT
+	@Path("modificarAlumno")
+	public void modificarAlumno(Alumno tmp) throws Exception {
+		alumnoFacade.modificarAlumno(tmp);
+	}
+	/*
 	@PUT
 	@Path("modificarAlumno")
 	public void modificarAlumno(
@@ -56,7 +61,7 @@ public class AlumnoServicios extends Generic{
 		tmp.setModificadoPor(modificadoPor);
 		alumnoFacade.modificarAlumno(tmp);
 	}
-	
+	*/
 	@DELETE
 	@Path("eliminarAlumno")
 	public void eliminarAlumno(@QueryParam("matricula") int matricula) throws Exception {
